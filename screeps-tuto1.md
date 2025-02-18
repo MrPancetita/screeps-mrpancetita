@@ -92,3 +92,73 @@ Documentation:
 ```js
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester2' );
 ```
+
+The second creep is ready, but it won't move until we include it into the program.
+
+To set the behavior of both creeps we could just duplicate the entire script for the second one, but it's much better to use the for loop against all the screeps in Game.creeps.
+
+Expand your program to both the creeps.
+Documentation:
+[JavaScript for loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+ ```js
+ module.exports.loop = function () {
+    for(var name in Game.creeps) {
+        var creep = Game.creeps[name];
+
+        if(creep.store.getFreeCapacity() > 0) {
+            var sources = creep.room.find(FIND_SOURCES);
+            if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(sources[0]);
+            }
+        }
+        else {
+            if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Spawn1']);
+            }
+        }
+    }
+}
+```
+
+Now let's improve our code by taking the workers' behavior out into a separate module. Create a module called `role.harvester` with the help of the Modules section on the left of the script editor and define a `run` function inside the `module.exports` object, containing the creep behavior.
+
+[Organizing code in modules](https://docs.screeps.com/modules.html)
+
+```js
+var roleHarvester = {
+
+    /** @param {Creep} creep **/
+    run: function(creep) {
+        if(creep.store.getFreeCapacity() > 0) {
+            var sources = creep.room.find(FIND_SOURCES);
+            if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(sources[0]);
+            }
+        }
+        else {
+            if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.spawns['Spawn1']);
+            }
+        }
+    }
+};
+
+module.exports = roleHarvester;
+```
+
+Now you can rewrite the main module code, leaving only the loop and a call to your new module by the method `require('role.harvester')`.
+
+Include the `role.harvester` module in the main module.
+
+```js
+var roleHarvester = require('role.harvester');
+
+module.exports.loop = function () {
+
+    for(var name in Game.creeps) {
+        var creep = Game.creeps[name];
+        roleHarvester.run(creep);
+    }
+}
+```
