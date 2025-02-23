@@ -1,4 +1,4 @@
-# Screeps Tutorial - Lesson 3
+# Screeps Tutorial - Lesson 3: Building structures
 
 The Controller upgrade gives access to some new structures: walls, ramparts, and extensions. We’ll discuss walls and ramparts in the next Tutorial section, for now let’s talk about extensions.
 

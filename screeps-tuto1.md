@@ -1,4 +1,4 @@
-# Screeps Tutorial - Lesson 1
+# Screeps Tutorial - Lesson 1: Game UI and basic scripting
 
 Your spawn creates new units called "creeps" by its method spawnCreep. Usage of this method is described in the documentation. Each creep has a name and certain body parts that give it various skills.
 
