@@ -2,9 +2,9 @@
 
 Your spawn creates new units called "creeps" by its method spawnCreep. Usage of this method is described in the documentation. Each creep has a name and certain body parts that give it various skills.
 
-You can address your spawn by its name the following way: Game.spawns['Spawn1'].
+You can address your spawn by its name the following way: `Game.spawns['Spawn1']`.
 
-Create a worker creep with the body array [WORK,CARRY,MOVE] and name Harvester1 (the name is important for the tutorial!). You can type the code in the console yourself or copy & paste the hint below.
+Create a worker creep with the body array `[WORK,CARRY,MOVE]` and name `Harvester1` (the name is important for the tutorial!). You can type the code in the console yourself or copy & paste the hint below.
 
 [Your-colony](https://docs.screeps.com/introduction.html#Your-colony)
 [Creeps](https://docs.screeps.com/creeps.html)
@@ -15,7 +15,7 @@ Create a worker creep with the body array [WORK,CARRY,MOVE] and name Harvester1 
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1' );
 ```
 
-It is time to put the creep to work! This yellow square is an energy source — a valuable game resource. It can be harvested by creeps with one or more WORK body parts and transported to the spawn by creeps with CARRY parts.
+It is time to put the creep to work! This yellow square is an energy source — a valuable game resource. It can be harvested by creeps with one or more `WORK` body parts and transported to the spawn by creeps with `CARRY` parts.
 
 In the script tab. Here you can write scripts that will run on a permanent basis, each game tick in a loop. It allows writing constantly working programs to control behaviour of your creeps which will work even while you are offline (in the real game only, not the Simulation Room mode).
 
