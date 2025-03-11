@@ -2,9 +2,9 @@
 
 In this Tutorial section we’ll talk about a key strategic object in your room: Room Controller. By controlling this invincible structure you can build facilities in the room. The higher the controller level, the more structures available to build.
 
-You will need a new worker creep to upgrade your controller level. Let's call it "Upgrader1". In following sections we'll discuss how to create creeps automatically, but for now let's send a command manually to the console.
+You will need a new worker creep to upgrade your controller level. Let's call it `Upgrader1`. In following sections we'll discuss how to create creeps automatically, but for now let's send a command manually to the console.
 
-Spawn a creep with the body [WORK,CARRY,MOVE] and the name Upgrader1.
+Spawn a creep with the body `[WORK,CARRY,MOVE]` and the name `Upgrader1`.
 
 Documentation:
 
@@ -16,13 +16,13 @@ Documentation:
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Upgrader1' );
 ```
 
-Creep "Upgrader1" went to perform the same task as the harvester, but we don't want it to. We need to differentiate creep roles.
+Creep `Upgrader1` went to perform the same task as the harvester, but we don't want it to. We need to differentiate creep roles.
 
 To do that, we need to utilize the memory property of each creep that allows writing custom information into the creep's "memory". Let's do this to assign different roles to our creeps.
 
 All your stored memory is accessible via the global Memory object. You can use it any way you like.
 
-Write a property role='harvester' into the memory of the harvester creep and role='upgrader' — to the upgrader creep with the help of the console.
+Write a property `role='harvester'` into the memory of the harvester creep and `role='upgrader'` — to the upgrader creep with the help of the console.
 
 Documentation:
 

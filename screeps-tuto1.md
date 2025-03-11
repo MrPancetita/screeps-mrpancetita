@@ -11,6 +11,8 @@ Create a worker creep with the body array `[WORK,CARRY,MOVE]` and name `Harveste
 [Game-object](https://docs.screeps.com/global-objects.html#Game-object)
 [StructureSpawn](https://docs.screeps.com/api/#StructureSpawn)
 
+Code (console):
+
 ```js
 Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1' );
 ```
@@ -39,6 +41,8 @@ Documentation:
 [Creep.moveTo](https://docs.screeps.com/api/#Creep.moveTo)
 [Creep.harvest](https://docs.screeps.com/api/#Creep.harvest)
 
+Code (main module):
+
 ```js
 module.exports.loop = function () {
     var creep = Game.creeps['Harvester1'];
@@ -60,6 +64,8 @@ Extend the creep program so that it can transfer harvested energy to the spawn a
 Documentation:
 [Creep.transfer](https://docs.screeps.com/api/#Creep.transfer)
 [Creep.store](https://docs.screeps.com/api/#Creep.store)
+
+Code (main module):
 
 ```js
 module.exports.loop = function () {
@@ -85,7 +91,7 @@ Let's create another worker creep to help the first one. It will cost another 20
 
 Remember: to execute code once just type it in the "Console" tab.
 
-Spawn a second creep with the body [WORK,CARRY,MOVE] and name Harvester2.
+Spawn a second creep with the body `[WORK,CARRY,MOVE]` and name `Harvester2`.
 Documentation:
 [StructureSpawn.spawnCreep](https://docs.screeps.com/api/#StructureSpawn.spawnCreep)
 
@@ -98,8 +104,12 @@ The second creep is ready, but it won't move until we include it into the progra
 To set the behavior of both creeps we could just duplicate the entire script for the second one, but it's much better to use the for loop against all the screeps in Game.creeps.
 
 Expand your program to both the creeps.
+
 Documentation:
-[JavaScript for loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+- [JavaScript for loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+Code (main module):
 
  ```js
  module.exports.loop = function () {
