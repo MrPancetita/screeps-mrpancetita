@@ -1,6 +1,7 @@
 # Walkthrough
 
-### 1. Configuración Inicial
+## 1. Configuración Inicial
+
 - **Familiarización:**  
   - Lee la documentación oficial y explora guías y foros.
   - Comprende las mecánicas básicas: recolección de energía, controladores y estructuras.
@@ -11,7 +12,8 @@
 
 ---
 
-### 2. Producción de Creeps Básicos
+## 2. Producción de Creeps Básicos
+
 - **Roles Iniciales:**  
   - **Harvester:** Instanciar 1 Harvester para recolectar energía de las fuentes.
   - **Upgrader:** Crear 1 Upgrader para utilizar la energía y mejorar el controlador.
@@ -22,7 +24,8 @@
 
 ---
 
-### 3. Mejora del Controlador
+## 3. Mejora del Controlador
+
 - **Objetivo Inmediato:**  
   - Utiliza la energía recolectada para subir de nivel el controlador.
   
@@ -32,7 +35,8 @@
 
 ---
 
-### 4. Construcción de Infraestructura Básica
+## 4. Construcción de Infraestructura Básica
+
 - **Estructuras de Soporte:**  
   - Ampliar y optimizar los spawns y extensiones.
   - Construir contenedores o almacenes para gestionar la energía.
@@ -45,7 +49,8 @@
 
 ---
 
-### 5. Expansión y Diversificación de Roles
+## 5. Expansión y Diversificación de Roles
+
 - **Aumento de la Producción:**  
   - Revisa y ajusta el número de creeps por rol según las necesidades energéticas y de construcción.
   - Introduce roles complementarios (por ejemplo, repairers para mantenimiento, scouts para exploración) según evolucione el juego.
@@ -59,6 +64,7 @@
 ---
 
 ### 6. Estrategia de Defensa y Seguridad
+
 - **Fortificación:**  
   - A medida que subes de nivel, construye defensas más robustas: torres avanzadas, muros reforzados y ramparts.
   - Evalúa amenazas y ajusta la estrategia defensiva ante la aparición de enemigos.
@@ -68,7 +74,8 @@
 
 ---
 
-### 7. Optimización y Gestión del Código
+## 7. Optimización y Gestión del Código
+
 - **Refactorización:**  
   - Revisa y mejora tu estructura de código para optimizar el rendimiento y reducir recursos innecesarios.
   
@@ -80,7 +87,8 @@
 
 ---
 
-### 8. Estrategia a Largo Plazo y Progresión
+## 8. Estrategia a Largo Plazo y Progresión
+
 - **Subida de Niveles del Controlador:**  
   - Prioriza la mejora continua del controlador para desbloquear tecnologías y estructuras avanzadas (laboratorios, terminales, entre otras).
 
